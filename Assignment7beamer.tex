@@ -1,0 +1,63 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\title{Assignment7}
+\author{NIMMALA AVINASH}
+\institute{IITH}
+\date{\today}
+\logo{\large}
+
+\begin{document}
+\maketitle
+\begin{frame}
+{\LARGE \textbf{Question:\\}}
+\begin{large}
+The events A,B and C are such that \\
+\begin{align}
+P(A)=P(B)&=P(C)=0.5\\
+P(AB)=P(AC)&=P(BC)=P(ABC)=0.25
+\end{align}
+
+show that the zero-one random variables associated with these events are not independent;they are,however,independent in pairs.\\
+\end{large}
+\end{frame}
+\begin{frame}
+{\LARGE \textbf{Solution:\\}}
+\begin{large}
+\begin{align}
+P\{x_{A}=1,x_{B}=1,x_{C}=1\} = P(ABC)&=\frac{1}{4}\\
+P\{x_{A}=1\} = P(A) =&\frac{1}{2}\\ P\{x_{B}=1\} = P(B) =& \frac{1}{2}\\
+P\{x_{C}=1\}=P(c)=&\frac{1}{2}\\
+P\{x_{A}=1,x_{B}=1,x_{C}=1\}\neq P\{x_{A}=1\}P\{x_{B}=&1\}P\{x_{C}=1\}
+\end{align}
+hence $ x_{A},x_{B},x_{C}$ are not independent.\\
+\end{large}
+\end{frame}
+\begin{frame}{Solution}
+\begin{large}
+But,\\
+\begin{align}
+P\{x_{A}=1,x_{B}=1\}=P(AB)=\frac{1}{4}=p\{x_{A}=1\}p\{x_{C}=1\}
+\end{align}
+similarly for any other combination,e.g.,\\since
+$ P(A) = P(AB)+P(A\overline{B}),$we conclude that\\
+$P(A\overline{B}) = P(A) - P(AB)$\\
+\end{large}
+\end{frame}
+\begin{frame}
+\begin{large}
+\begin{align}
+P(A\overline{B})=\frac{1}{2}-\frac{1}{4} = \frac{1}{4}\\
+P(\overline{B})=1-P(B)=\frac{1}{2}\\
+p\{x_{A}=1,x_{B}=0\}=P(A\overline{B})=\frac{1}{4}\\
+p\{x_{B}=0\}=P(\overline{B})=\frac{1}{2} \\
+\implies p\{x_{A}=1,x_{B}=0\}=p\{x_{A}=1\}p\{x_{B}=0\}
+\end{align}
+So,these are independent in pairs.\\
+\end{large}
+\end{frame}
+\end{document}
